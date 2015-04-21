@@ -24,4 +24,4 @@
     <item android:state_focused="true"                                                             android:drawable="@drawable/com_facebook_picker_list_focused" />
     <item                                                                                          android:drawable="@android:color/transparent" />
 </selector>
-<!-- From: file:/D:/develop/ASNE/facebookSDK/res/drawable/com_facebook_picker_item_background.xml --><!-- From: file:/C:/Users/seanliu93/Documents/GitHub/Compass_Android/app/build/intermediates/exploded-aar/com.github.asne.facebook/facebook/3.17.2/res/drawable/com_facebook_picker_item_background.xml -->
+<!-- From: file:/D:/develop/ASNE/facebookSDK/res/drawable/com_facebook_picker_item_background.xml --><!-- From: file:/D:/GIT/CompassAndroid/app/build/intermediates/exploded-aar/com.github.asne.facebook/facebook/3.17.2/res/drawable/com_facebook_picker_item_background.xml -->
