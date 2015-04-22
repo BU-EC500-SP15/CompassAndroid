@@ -55,7 +55,7 @@ ADDED from AndroidManifest.xml:21:5
 		ADDED from AndroidManifest.xml:22:9
 application
 ADDED from AndroidManifest.xml:25:5
-MERGED from Compass_Android:ParseLoginUI:unspecified:11:5
+MERGED from CompassAndroid:ParseLoginUI:unspecified:11:5
 MERGED from com.android.support:support-v4:22.0.0:22:5
 MERGED from com.github.asne.facebook:facebook:3.17.2:24:5
 MERGED from com.android.support:support-v4:22.0.0:22:5
@@ -128,37 +128,43 @@ ADDED from AndroidManifest.xml:55:13
 	android:value
 		ADDED from AndroidManifest.xml:57:17
 activity#com.facebook.LoginActivity
-ADDED from AndroidManifest.xml:60:9
+ADDED from AndroidManifest.xml:59:9
 	android:label
-		ADDED from AndroidManifest.xml:62:13
-	android:name
 		ADDED from AndroidManifest.xml:61:13
+	android:name
+		ADDED from AndroidManifest.xml:60:13
 	android:launchMode
-		ADDED from AndroidManifest.xml:63:13
+		ADDED from AndroidManifest.xml:62:13
 meta-data#com.google.android.gms.version
-ADDED from AndroidManifest.xml:66:9
+ADDED from AndroidManifest.xml:64:9
 MERGED from com.google.android.gms:play-services:6.5.87:21:9
 	android:name
-		ADDED from AndroidManifest.xml:67:13
+		ADDED from AndroidManifest.xml:65:13
 	android:value
-		ADDED from AndroidManifest.xml:68:13
+		ADDED from AndroidManifest.xml:66:13
 meta-data#com.google.android.maps.v2.API_KEY
-ADDED from AndroidManifest.xml:69:9
+ADDED from AndroidManifest.xml:67:9
 	android:name
-		ADDED from AndroidManifest.xml:70:13
+		ADDED from AndroidManifest.xml:68:13
 	android:value
-		ADDED from AndroidManifest.xml:71:13
+		ADDED from AndroidManifest.xml:69:13
 activity#seanliu93.compass_android.MapsActivity
-ADDED from AndroidManifest.xml:75:9
+ADDED from AndroidManifest.xml:71:9
+	android:label
+		ADDED from AndroidManifest.xml:73:13
+	android:theme
+		ADDED from AndroidManifest.xml:74:13
+	android:name
+		ADDED from AndroidManifest.xml:72:13
+activity#seanliu93.compass_android.IndoorMap
+ADDED from AndroidManifest.xml:76:9
 	android:label
 		ADDED from AndroidManifest.xml:78:13
-	android:theme
-		ADDED from AndroidManifest.xml:77:13
 	android:name
-		ADDED from AndroidManifest.xml:76:13
+		ADDED from AndroidManifest.xml:77:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
-MERGED from Compass_Android:ParseLoginUI:unspecified:7:5
+MERGED from CompassAndroid:ParseLoginUI:unspecified:7:5
 MERGED from com.android.support:support-v4:22.0.0:20:5
 MERGED from com.github.asne.facebook:facebook:3.17.2:20:5
 MERGED from com.android.support:support-v4:22.0.0:20:5

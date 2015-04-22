@@ -1,14 +1,18 @@
 package seanliu93.compass_android;
 
+import android.content.Intent;
 import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.LocationSource;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.ParseUser;
 
@@ -22,11 +26,80 @@ public class MapsActivity extends FragmentActivity {
     private LocationSource.OnLocationChangedListener mListener;
     private LocationManager locationManager;
 
+    private SearchView searchView;
+
+    private LatLng latlng; // fOR TESTING
+
+    private MarkerOptions marker;
+
+    private static String userID; // the userID being searched
+
+    private static String location; // the location where the userID exists
+
+    // Access to String userID
+    public static String GetUserID()
+    {
+        return userID;
+    }
+
+    public static void SetUserID(String s)
+    {
+        userID = s;
+    }
+
+    // Access to String location
+    public static String GetLocation()
+    {
+        return location;
+    }
+
+    public static void SetLocation(String s)
+    {
+        location = s;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         new initializeContainersTask().execute();
+
+        latlng = new LatLng(0.0, 0.0);
+
+        searchView = (SearchView)findViewById(R.id.search_view);
+
+        // About Search Parts
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String arg0)
+            {
+                // TODO Auto-generated method stub to handle Search Requests
+
+                // Only for testing
+                Toast.makeText(MapsActivity.this, "________" + arg0, Toast.LENGTH_SHORT).show();
+
+                MapsActivity.SetUserID("NewUserID");
+                MapsActivity.SetUserID("NewLocation");
+
+                // Do Search for the userID (arg0)
+
+                // Put a Marker onto the map
+                marker = new MarkerOptions().position(latlng);
+
+                mMap.addMarker(marker.title("Marker"));
+
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String arg0)
+            {
+                // TODO Auto-generated method stub
+
+                return true;
+
+            }
+        });
 
         setUpMapIfNeeded();
     }
@@ -79,8 +152,32 @@ public class MapsActivity extends FragmentActivity {
         mMap.setBuildingsEnabled(true);
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
+        mMap.addMarker(marker.title("Marker")); // This shall be the username you search for
 
-        mMap.addMarker(new MarkerOptions().position(new LatLng(42.33, 71)).title("Marker"));
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+
+            @Override
+            public boolean onMarkerClick(Marker marker)
+            {
+                // Create Get Requests and goto the indoor map
+                Toast.makeText(MapsActivity.this,  "Marker " + marker.getTitle() + " has been clicked", Toast.LENGTH_SHORT).show();
+
+                // Go to Indoor map interface
+                Intent intent = new Intent(MapsActivity.this, IndoorMap.class);
+
+                Bundle bundle = new Bundle();
+
+                bundle.putString("userID", MapsActivity.GetUserID());
+                bundle.putString("Location", MapsActivity.GetLocation());
+                intent.putExtras(bundle);
+
+                startActivity(intent); //Two parameters：The First is the object of the intent，The second is the requestCode
+
+                return true;
+            }
+        });
+
+        mMap.addMarker(new MarkerOptions().position(latlng).title(userID));
     }
 
     private class initializeContainersTask extends AsyncTask<String, Void, String> {
@@ -99,4 +196,6 @@ public class MapsActivity extends FragmentActivity {
         }
 
     }
+
+
 }

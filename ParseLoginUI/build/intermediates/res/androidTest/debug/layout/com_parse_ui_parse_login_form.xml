@@ -51,4 +51,4 @@
         android:layout_marginBottom="@dimen/com_parse_ui_small_vertical_spacing"
         android:text="@string/com_parse_ui_forgot_password_button_label" />
 </LinearLayout>
-<!-- From: file:/C:/Users/seanliu93/Documents/GitHub/Compass_Android/ParseLoginUI/res/layout/com_parse_ui_parse_login_form.xml --><!-- From: file:/C:/Users/seanliu93/Documents/GitHub/Compass_Android/ParseLoginUI/build/intermediates/bundles/debug/res/layout/com_parse_ui_parse_login_form.xml -->
+<!-- From: file:/D:/GIT/CompassAndroid/ParseLoginUI/res/layout/com_parse_ui_parse_login_form.xml --><!-- From: file:/D:/GIT/CompassAndroid/ParseLoginUI/build/intermediates/bundles/debug/res/layout/com_parse_ui_parse_login_form.xml -->

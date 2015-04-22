@@ -79,6 +79,10 @@
             android:label="@string/title_activity_maps"
             android:theme="@style/Theme.AppCompat.Light" >
         </activity>
+        <activity
+            android:name="seanliu93.compass_android.IndoorMap"
+            android:label="@string/title_activity_indoor_map" >
+        </activity>
     </application>
 
 </manifest>

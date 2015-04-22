@@ -22,4 +22,4 @@
     android:layout_height="50dip"
     android:layout_gravity="center_vertical"
     android:src="@drawable/com_facebook_profile_default_icon" />
-<!-- From: file:/D:/develop/ASNE/facebookSDK/res/layout/com_facebook_picker_image.xml --><!-- From: file:/C:/Users/seanliu93/Documents/GitHub/Compass_Android/ParseLoginUI/build/intermediates/exploded-aar/com.github.asne.facebook/facebook/3.17.2/res/layout/com_facebook_picker_image.xml -->
+<!-- From: file:/D:/develop/ASNE/facebookSDK/res/layout/com_facebook_picker_image.xml --><!-- From: file:/D:/GIT/CompassAndroid/ParseLoginUI/build/intermediates/exploded-aar/com.github.asne.facebook/facebook/3.17.2/res/layout/com_facebook_picker_image.xml -->
